@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'core',
+    'usuarios',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -124,4 +125,4 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfile')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Adicionando modelo de Usuário customizado
-# AUTH_USER_MODEL = 'usuarios.CustomUsario'
+AUTH_USER_MODEL = 'usuarios.CustomUsuario'
