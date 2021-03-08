@@ -1,7 +1,7 @@
-"""usermodel1 URL Configuration
+"""djangoum3 URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/3.1/topics/http/urls/
+    https://docs.djangoproject.com/en/2.2/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -22,7 +22,3 @@ urlpatterns = [
     path('contas/', include('django.contrib.auth.urls')),
     path('', TemplateView.as_view(template_name='index.html'), name='index'),
 ]
-
-admin.site.site_header = 'Geek University'
-admin.site.site_title = 'Evolua seu lado Geek!'
-admin.site.index_title = 'Sistema de Gerenciamento de Posts'

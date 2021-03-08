@@ -47,3 +47,6 @@ class CustomUsuario(AbstractUser):
         return self.email
 
     objects = UsuarioManager()
+
+
+
