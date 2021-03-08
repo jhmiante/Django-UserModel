@@ -17,4 +17,4 @@ class PostAdmin(admin.ModelAdmin):
 
     def save_model(self, request, obj, form, change):
         obj.autor = request.user
-        super().save(request, obj, form, change)
+        super().save_model(request, obj, form, change)
