@@ -1,11 +1,10 @@
 from django.db import models
-
-from django.conf import settings
+from django.contrib.auth import get_user_model
 
 
 #Não é a forma ideal
 class Post(models.Model):
-    autor = models.CharField(settings.AUTH_USER_MODEL, verbose_name='Autor', on_delete=models.CASCADE)
+    autor = models.CharField(get_user_model(), verbose_name='Autor', on_delete=models.CASCADE)
     titulo = models.CharField('Titulo', max_length=100)
     text = models.CharField('Texto', max_length=400)
 
