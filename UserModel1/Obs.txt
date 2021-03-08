@@ -1,0 +1,43 @@
+Criando Usuário
+
+##########
+    from django.contrib.auth.models import User
+
+    usuario = User.objects.create_user(username='teste', password='123456', email='teste@teste.com')
+    usuario.save()
+##########
+
+Consultando User
+
+##########
+    ret = User.objects.all()
+    ret
+
+    ret[0].username
+    ret[0].password
+
+    dir(User)
+##########
+
+Criando usuário com acesso a area administrativa sem ser superUser
+    Atributo: is_staff = True
+
+##########
+    user = User.objects.create_user(username='Usuario', password='123456', email='teste@teste.com', is_staff= True)
+    user.save()
+##########
+
+Criando um superUser com o create_user
+
+##########
+    adm = User.objects.create_user(username='adm', password='123456', email='teste@teste.com', is_staff= True, is_superuser= True)
+##########
+
+Criando usuário com atributos personalizados
+
+##########
+    user2 = User.objects.create_user(username='user', password='123456', email='t@dj.com')
+    user2.cat_personalizada = 'Designer'
+    user2.save()
+##########
+
